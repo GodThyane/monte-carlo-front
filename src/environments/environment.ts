@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  url: 'https://montecarlo-python.herokuapp.com/'
+  url: 'https://montecarlo-python.herokuapp.com/',
+  url2: 'https://dcb-node-deploy-poker.herokuapp.com/',
+  url3: 'https://gentle-island-67610.herokuapp.com/'
 };
 
 /*

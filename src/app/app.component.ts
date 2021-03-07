@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Integral} from '../models/Integral';
 import {FunctionService} from './function.service';
 import {NotificationService} from './notification.service';
@@ -9,7 +9,7 @@ import {NotificationService} from './notification.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'MonteCarloFront';
   funct = '';
   max;
@@ -85,6 +85,18 @@ export class AppComponent {
     this.debajo_positive = 0;
     this.encima = 0;
     this.area_rect = 0;
+  }
+
+  ngOnInit(): void {
+    this.fncS.ping1().subscribe(() => {
+      console.log('Pong');
+    });
+    this.fncS.ping2().subscribe(() => {
+      console.log('Pong');
+    });
+    this.fncS.ping3().subscribe(() => {
+      console.log('Pong');
+    });
   }
 
 }
