@@ -34,7 +34,9 @@ export class AppComponent {
     private notifyS: NotificationService
   ) {
     for (let i = 97; i < 122; i++) {
-      this.abcdario.push(String.fromCharCode(i));
+      if (String.fromCharCode(i) != 'e') {
+        this.abcdario.push(String.fromCharCode(i));
+      }
     }
   }
 
